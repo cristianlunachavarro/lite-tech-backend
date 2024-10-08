@@ -59,7 +59,6 @@ export class PostsController {
         .split(',')
         .map((id) => new Types.ObjectId(id));
       const posts = await this.postsService.findRelated(actualRelatePostsIds);
-
       return posts;
     } catch (error) {
       console.log('Error,', error);
