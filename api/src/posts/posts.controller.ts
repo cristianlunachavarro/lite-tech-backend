@@ -16,6 +16,8 @@ import { Model, ObjectId, Types } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 
 import { FileInterceptor } from '@nestjs/platform-express';
+import { Express } from 'express';
+
 import { diskStorage } from 'multer';
 import { v4 as uuidv4 } from 'uuid';
 import { extname } from 'path';
