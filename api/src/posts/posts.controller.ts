@@ -106,7 +106,7 @@ export class PostsController {
     }
 
     try {
-      return { imageUrl: `http://localhost:3000/uploads/${file.filename}` };
+      return { imageUrl: `${process.env.UPLOAD_URL}/${file.filename}` };
     } catch (error) {
       console.log('Error uploading file:', error);
       throw new InternalServerErrorException('File upload failed');
