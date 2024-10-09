@@ -1,0 +1,14 @@
+{
+    "functions": {
+      "api/*": {
+        "runtime": "nodejs16.x"
+      }
+    },
+    "builds": [
+      { "src": "dist/main.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/api/main.handler" }
+    ]
+  }
+  
